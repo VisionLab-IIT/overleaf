@@ -4,3 +4,7 @@
 # user defined files
 .env
 docker-compose.override.yml
+
+# local planning (not for upstream)
+CLAUDE.md
+.devtool/
