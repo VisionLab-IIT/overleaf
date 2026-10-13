@@ -11,9 +11,10 @@ pins a commit of this repository as a git submodule.
 
 * `upstream`: an unmodified mirror of `overleaf/overleaf`.
 * `latexium` (default): `upstream` plus this README. Patches to Overleaf
-  that LaTeXium cannot avoid would go here, each listed below. LaTeXium adds its code through Overleaf's own extension points (a
-  web module, a settings file named by `OVERLEAF_CONFIG`, and nginx's
-  `vhost-extras` include) instead of editing Overleaf files wherever that is possible.
+  that LaTeXium cannot avoid would go here, each listed below. LaTeXium adds
+  its code through Overleaf's own extension points (a web module, a settings
+  file named by `OVERLEAF_CONFIG`, and nginx's `vhost-extras` include)
+  instead of editing Overleaf files wherever that is possible.
 
 Upstream releases are merged from `upstream` into `latexium`, never rebased.
 
