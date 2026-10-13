@@ -11,16 +11,20 @@ pins a commit of this repository as a git submodule.
 
 * `upstream`: an unmodified mirror of `overleaf/overleaf`.
 * `latexium` (default): `upstream` plus this README. Patches to Overleaf
-  that LaTeXium cannot avoid would go here, each listed below; there are
-  none. LaTeXium adds its code through Overleaf's own extension points (a
+  that LaTeXium cannot avoid would go here, each listed below. LaTeXium adds its code through Overleaf's own extension points (a
   web module, a settings file named by `OVERLEAF_CONFIG`, and nginx's
-  `vhost-extras` include) instead of editing Overleaf files.
+  `vhost-extras` include) instead of editing Overleaf files wherever that is possible.
 
 Upstream releases are merged from `upstream` into `latexium`, never rebased.
 
 ## Patches to Overleaf
 
-None.
+* Admin navigation (small, so administrators find LaTeXium's admin pages):
+  `services/web/frontend/js/shared/components/navbar/admin-menu.tsx` and
+  `services/web/app/views/layout/navbar-marketing.pug` get an "Invitations"
+  entry (`/admin/lab/invitations`) next to "Manage Users";
+  `services/web/app/views/admin/index.pug` gets a one-line notice linking to
+  the Users, Invitations and Audit log pages.
 
 ## License and trademarks
 
