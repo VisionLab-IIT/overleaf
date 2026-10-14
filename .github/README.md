@@ -27,6 +27,12 @@ Upstream releases are merged from `upstream` into `latexium`, never rebased.
   "Audit log" entry (`/admin/lab/audit`);
   `services/web/app/views/admin/index.pug` gets a one-line notice linking to
   the Users, Invitations and Audit log pages.
+* Account menu (small, so members find their AI tokens and connect page):
+  `services/web/frontend/js/shared/components/navbar/account-menu-items.tsx`
+  (React navbar and project-list sidebar) and
+  `services/web/app/views/layout/navbar-marketing.pug` get an "AI assistants"
+  entry (`/lab/ai`) after "Account settings", shown only when the right
+  footer lists that page (LaTeXium's settings layer adds it in lab mode).
 
 ## License and trademarks
 

@@ -24,6 +24,10 @@ export function AccountMenuItems({
   const logOutFormId = 'logOutForm'
   const dsNavStyle = useDsNavStyle()
   const hasOverallThemes = Boolean(getMeta('ol-overallThemes'))
+  // LaTeXium: the lab module lists its AI assistants page in the right footer
+  const showAiAssistantsLink = Boolean(
+    getMeta('ol-footer')?.rightItems?.some(item => item.url === '/lab/ai')
+  )
 
   return (
     <>
@@ -34,6 +38,9 @@ export function AccountMenuItems({
       <NavDropdownLinkItem href="/user/settings">
         {t('account_settings')}
       </NavDropdownLinkItem>
+      {showAiAssistantsLink ? (
+        <NavDropdownLinkItem href="/lab/ai">AI assistants</NavDropdownLinkItem>
+      ) : null}
       {showSubscriptionLink ? (
         <NavDropdownLinkItem href="/user/subscription">
           {t('subscription')}
