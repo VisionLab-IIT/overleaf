@@ -44,6 +44,9 @@ export default function AdminMenu({
           <NavDropdownLinkItem href="/admin/lab/invitations">
             Invitations
           </NavDropdownLinkItem>
+          <NavDropdownLinkItem href="/admin/lab/audit">
+            Audit log
+          </NavDropdownLinkItem>
         </>
       ) : null}
       {canDisplayProjectUrlLookup ? (

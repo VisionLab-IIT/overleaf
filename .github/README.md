@@ -23,7 +23,8 @@ Upstream releases are merged from `upstream` into `latexium`, never rebased.
 * Admin navigation (small, so administrators find LaTeXium's admin pages):
   `services/web/frontend/js/shared/components/navbar/admin-menu.tsx` and
   `services/web/app/views/layout/navbar-marketing.pug` get an "Invitations"
-  entry (`/admin/lab/invitations`) next to "Manage Users";
+  entry (`/admin/lab/invitations`) next to "Manage Users", followed by an
+  "Audit log" entry (`/admin/lab/audit`);
   `services/web/app/views/admin/index.pug` gets a one-line notice linking to
   the Users, Invitations and Audit log pages.
 
