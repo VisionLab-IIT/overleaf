@@ -38,6 +38,13 @@ Upstream releases are merged from `upstream` into `latexium`, never rebased.
   `zh-CN.json`, the accessible name of the editor toolbar's home logo, uses
   the app name (`__appName__ logo`) like the other app-name strings.
 
+* Toolbar extension point (three lines, so the AI assistant's button sits in
+  the toolbar's actions on the right, just left of History, where the editor's
+  other buttons are): `services/web/frontend/js/features/ide-react/components/toolbar/toolbar.tsx`
+  renders the components registered under `toolbarActionsExtraComponents`
+  before `ShowHistoryButton`, and `services/web/config/settings.defaults.js`
+  lists the key with an empty default (Overleaf's macro fails on an unknown key).
+
 ## License and trademarks
 
 Overleaf Community Edition is licensed under the GNU Affero General Public

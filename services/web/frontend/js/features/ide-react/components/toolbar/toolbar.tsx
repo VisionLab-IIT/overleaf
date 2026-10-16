@@ -24,6 +24,9 @@ import OfflineIndicator from './offline-indicator'
 
 const [publishModalModules] = importOverleafModules('publishModalToolbarButton')
 const SubmitProjectButton = publishModalModules?.import.default
+const toolbarActionsExtraComponents = importOverleafModules(
+  'toolbarActionsExtraComponents'
+)
 
 export const Toolbar = () => {
   const { view, restoreView, focusMode, setFocusMode, pdfLayout, setView } =
@@ -138,6 +141,11 @@ export const Toolbar = () => {
         <div className="ide-redesign-toolbar-actions">
           {!isOfflineDueToNetworkStall && <OnlineUsers />}
           <RequestAccessButton />
+          {toolbarActionsExtraComponents.map(
+            ({ import: { default: Component } }, index) => (
+              <Component key={index} />
+            )
+          )}
           {!isRestrictedTokenMember && <ShowHistoryButton />}
           <ChangeLayoutButton />
           {shouldDisplaySubmitButton && cobranding && (
