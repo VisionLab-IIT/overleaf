@@ -1439,7 +1439,7 @@
   "overleaf_individual_plans": "Overleaf 个人计划",
   "overleaf_labs": "Overleaf Labs",
   "overleaf_learning_center": "Overleaf 学习中心",
-  "overleaf_logo": "Overleaf Logo",
+  "overleaf_logo": "__appName__ Logo",
   "overleaf_template_gallery": "Overleaf 模板库",
   "overview": "概览",
   "overwrite": "覆盖",

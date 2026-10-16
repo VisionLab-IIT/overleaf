@@ -33,6 +33,10 @@ Upstream releases are merged from `upstream` into `latexium`, never rebased.
   `services/web/app/views/layout/navbar-marketing.pug` get an "AI assistants"
   entry (`/lab/ai`) after "Account settings", shown only when the right
   footer lists that page (LaTeXium's settings layer adds it in lab mode).
+* Logo label (one string, so screen readers do not announce Overleaf's logo
+  next to LaTeXium's): `overleaf_logo` in `services/web/locales/en.json` and
+  `zh-CN.json`, the accessible name of the editor toolbar's home logo, uses
+  the app name (`__appName__ logo`) like the other app-name strings.
 
 ## License and trademarks
 
