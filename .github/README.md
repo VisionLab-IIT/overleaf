@@ -45,6 +45,15 @@ Upstream releases are merged from `upstream` into `latexium`, never rebased.
   before `ShowHistoryButton`, and `services/web/config/settings.defaults.js`
   lists the key with an empty default (Overleaf's macro fails on an unknown key).
 
+* Applied AI proposals (a few lines, so the editor does not open the modal
+  "Document Updated Externally" on every Apply and History says what it was):
+  `services/web/frontend/js/features/ide-react/context/editor-manager-context.tsx`
+  treats an external update with source `lab-ai-proposal` like one from the
+  Git bridge (no modal); `.../history/components/change-list/origin.tsx`,
+  `.../history/services/types/shared.ts`, `services/web/locales/en.json` and
+  `services/web/frontend/extracted-translations.json` give History the label
+  "AI proposal applied" for origin kind `lab-ai-proposal`.
+
 ## License and trademarks
 
 Overleaf Community Edition is licensed under the GNU Affero General Public

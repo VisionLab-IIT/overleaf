@@ -12,7 +12,7 @@ export interface Meta {
   start_ts: number
   end_ts: number
   type?: 'external' // TODO
-  source?: 'git-bridge' // TODO
+  source?: 'git-bridge' | 'lab-ai-proposal' // TODO
   origin?:
     | {
         kind:
@@ -20,6 +20,7 @@ export interface Meta {
           | 'upload'
           | 'git-bridge'
           | 'github'
+          | 'lab-ai-proposal'
           | 'history-resync'
           | 'history-migration'
       }

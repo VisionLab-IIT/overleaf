@@ -1184,6 +1184,7 @@
   "history_entry_origin_dropbox": "via Dropbox",
   "history_entry_origin_git": "via Git",
   "history_entry_origin_github": "via GitHub",
+  "history_entry_origin_lab_ai_proposal": "AI proposal applied",
   "history_entry_origin_upload": "upload",
   "history_label_created_by": "Created by",
   "history_label_project_current_state": "Current state",
