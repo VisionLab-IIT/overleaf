@@ -8,7 +8,7 @@ import ShowHistoryButton from './show-history-button'
 import RequestAccessButton from './request-access-button'
 import { useLayoutContext } from '@/shared/context/layout-context'
 import BackToEditorButton from '@/features/editor-navigation-toolbar/components/back-to-editor-button'
-import { useCallback } from 'react'
+import { ElementType, useCallback } from 'react'
 import * as eventTracking from '../../../../infrastructure/event-tracking'
 import { ToolbarLogos } from './logos'
 import { useEditorContext } from '@/shared/context/editor-context'
@@ -26,7 +26,9 @@ const [publishModalModules] = importOverleafModules('publishModalToolbarButton')
 const SubmitProjectButton = publishModalModules?.import.default
 const toolbarActionsExtraComponents = importOverleafModules(
   'toolbarActionsExtraComponents'
-)
+) as {
+  import: { default: ElementType }
+}[]
 
 export const Toolbar = () => {
   const { view, restoreView, focusMode, setFocusMode, pdfLayout, setView } =
