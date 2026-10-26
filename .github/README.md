@@ -45,6 +45,14 @@ Upstream releases are merged from `upstream` into `latexium`, never rebased.
   before `ShowHistoryButton`, and `services/web/config/settings.defaults.js`
   lists the key with an empty default (Overleaf's macro fails on an unknown key).
 
+* Project list extension point (a few lines, so the project list can show
+  LaTeXium's "AI" badge after the name of each project with AI access on):
+  `services/web/frontend/js/features/project-list/components/table/project-list-table-row.tsx`
+  renders the components registered under `projectListNameExtras`, each with
+  the row's `project`, right after the project's name link, and
+  `services/web/config/settings.defaults.js` lists the key with an empty
+  default.
+
 * Applied AI proposals (a few lines, so the editor does not open the modal
   "Document Updated Externally" on every Apply and History says what it was):
   `services/web/frontend/js/features/ide-react/context/editor-manager-context.tsx`

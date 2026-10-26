@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { ElementType, memo } from 'react'
 import InlineTags from './cells/inline-tags'
 import OwnerCell from './cells/owner-cell'
 import LastUpdatedCell from './cells/last-updated-cell'
@@ -8,6 +8,14 @@ import { getOwnerName } from '../../util/project'
 import { Project } from '../../../../../../types/project/dashboard/api'
 import { ProjectCheckbox } from './project-checkbox'
 import { ProjectListOwnerName } from '@/features/project-list/components/table/project-list-owner-name'
+import importOverleafModules from '../../../../../macros/import-overleaf-module.macro'
+
+// modules may add something after the project's name (LaTeXium: its AI badge)
+const projectListNameExtras = importOverleafModules(
+  'projectListNameExtras'
+) as {
+  import: { default: ElementType }
+}[]
 
 type ProjectListTableRowProps = {
   project: Project
@@ -24,7 +32,12 @@ function ProjectListTableRow({ project, selected }: ProjectListTableRowProps) {
       <td className="dash-cell-name">
         <a href={`/project/${project.id}`} translate="no">
           {project.name}
-        </a>{' '}
+        </a>
+        {projectListNameExtras.map(
+          ({ import: { default: Component } }, index) => (
+            <Component key={index} project={project} />
+          )
+        )}{' '}
         <InlineTags className="d-none d-md-inline" projectId={project.id} />
       </td>
       <td className="dash-cell-date-owner pb-0 d-md-none">

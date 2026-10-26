@@ -993,6 +993,7 @@ module.exports = {
     devToolbar: [],
     dsNavLibraryLink: [],
     trashPageTabs: [],
+    projectListNameExtras: [],
     adminUserLibrary: [],
     gitBridge: [],
     publishModalDropdownButton: [],
