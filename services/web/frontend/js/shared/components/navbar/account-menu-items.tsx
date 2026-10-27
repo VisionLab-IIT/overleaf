@@ -41,6 +41,11 @@ export function AccountMenuItems({
       {showAiAssistantsLink ? (
         <NavDropdownLinkItem href="/lab/ai">AI assistants</NavDropdownLinkItem>
       ) : null}
+      {showAiAssistantsLink ? (
+        <NavDropdownLinkItem href="/lab/account/logins">
+          Sign-in methods
+        </NavDropdownLinkItem>
+      ) : null}
       {showSubscriptionLink ? (
         <NavDropdownLinkItem href="/user/subscription">
           {t('subscription')}

@@ -200,6 +200,7 @@ nav.navbar.navbar-default.navbar-main.navbar-expand-lg(
 								+dropdown-menu-link-item(href='/user/settings') #{translate('account_settings')}
 								if (nav.right_footer || []).some(item => item.url === '/lab/ai')
 									+dropdown-menu-link-item(href='/lab/ai') AI assistants
+									+dropdown-menu-link-item(href='/lab/account/logins') Sign-in methods
 								if nav.showSubscriptionLink
 									+dropdown-menu-link-item(href='/user/subscription') #{translate('subscription')}
 								+dropdown-menu-divider
