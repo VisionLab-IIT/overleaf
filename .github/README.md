@@ -5,7 +5,8 @@ that [LaTeXium](https://github.com/VisionLab-IIT/latexium) is built on.
 LaTeXium is a self-hosted collaborative LaTeX editor for research labs. Its
 own code, deployment and documentation live in
 [VisionLab-IIT/latexium](https://github.com/VisionLab-IIT/latexium), which
-pins a commit of this repository as a git submodule.
+pins the exact commit of this repository it is tested with in `overleaf.ref`
+(cloned by `tools/overleaf.py`, not a git submodule).
 
 ## Branches
 
